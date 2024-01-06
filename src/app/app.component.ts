@@ -1,17 +1,17 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
-
+import { ClassDirective  } from './class.directive';
+import { LoopDirective } from './loop.directive';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet],
+  imports: [CommonModule, ClassDirective, LoopDirective],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-[x: string]: any;
   activeImg = 0;
+
   images = [
     {
       title: 'Title #1',
